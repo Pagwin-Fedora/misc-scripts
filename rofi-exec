@@ -1,4 +1,5 @@
 #!/bin/env sh
+#used so I can manipulate my keyboard in a semi efficient manner without having to open a terminal
 action=`rofi -position 2 -dmenu -p "Command to run the text through"`
 text=`rofi -position 2 -dmenu -p "Text to run through the command" | eval $action`
 echo $text

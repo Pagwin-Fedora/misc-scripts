@@ -1,4 +1,5 @@
 #!/bin/python
+# originally written to be used in the crunchy-dl script until I realized for that that I was an idiot
 import sys
 import itertools
 file = sys.stdin

@@ -1,2 +1,3 @@
 #!/bin/sh
+#made as a script that allows for me to click later originally used so I could join the queue to get on 2b2t while I slept because I was too cheap for priority queue
 countdown -r $1&&i3-msg workspace number $2&& xdotool mousemove $3 $4&& xdotool mousedown 1

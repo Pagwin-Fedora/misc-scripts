@@ -1,4 +1,5 @@
 #!/bin/sh
+# I wrote this when I was learning gradle(which I now forget how to use so I'm glad I wrote this lol) so I could make sure I fully understood how to generate a new gradel project
 gradle init
 mkdir -p src/main/java
 printf "public class start {public static void main(String args[]){}} " > src/main/java/start.java

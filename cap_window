@@ -1,2 +1,3 @@
 #!/bin/sh
+##lol I never used this because I just leared how to do this manually even though using this would be simpler/easier
 sleep 0$1 &&  maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png

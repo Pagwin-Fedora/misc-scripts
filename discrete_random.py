@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# idk what this script was written for but I think it solves some sort of statistics problem but again idk why I made it
 import math
 def solve_problem():
     num = int(input("How many points in the distribution?     "))

@@ -1,3 +1,4 @@
 #!/bin/sh
+#I don't remember why I wrote this at all
 regex=`echo "" | dmenu -i -p regex -l 1 -fn Monospace-18`
 notify-send regex\ results `rofi -location 2 -dmenu -i -p "text" | sed -e "$regex"`

@@ -1,3 +1,4 @@
+#converts from hexadecimal to decimal pretty simple
 def pairs(iterator):
 	iterator = iterator.__iter__()
 	first,second = iterator.__next__(),iterator.__next__()

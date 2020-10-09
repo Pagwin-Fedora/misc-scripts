@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#written to make it possible to speed up and slowdown videos(whiel I don't use this at all I do find it kinda elegant how few lines I wrote it in and how nice it kinda just looks)
 from moviepy.editor import *
 import click
 @click.command()

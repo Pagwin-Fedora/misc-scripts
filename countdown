@@ -1,4 +1,5 @@
 #!/bin/python
+#used in the click later script so I can keep track of how long it would be until it would click in a spot
 import time
 import sys
 reverse = False

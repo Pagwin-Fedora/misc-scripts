@@ -1,4 +1,5 @@
 #!/bin/bash
+# I wrote this shortly before learning of keychain, in my opinion though this is notably better than keychain because you only enter your keys when you actually go to use ssh in some form unlike with keychain which you have to give passwords too immediately
 ssh-add -l > /dev/null || ssh-add `cat ~/.config/ssh/key_list`
 if [ $# -gt 0 ]; then
 	/usr/bin/ssh $@
