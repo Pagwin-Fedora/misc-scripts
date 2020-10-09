@@ -1,0 +1,20 @@
+#!/bin/sh
+gradle init
+mkdir -p src/main/java
+printf "public class start {public static void main(String args[]){}} " > src/main/java/start.java
+echo "apply plugin: 'java'
+apply plugin:'application'
+mainClassName = 'start'
+sourceSets {
+    main {
+        java{
+        srcDir  'src'
+        }
+    }
+}
+jar {
+    baseName = 'init_default'
+    manifest {
+        attributes 'Main-Class': 'start'
+    }
+}" >> build.gradle
