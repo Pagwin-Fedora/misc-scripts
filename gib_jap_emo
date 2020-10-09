@@ -1,0 +1,2 @@
+#!/bin/sh
+curl "https://api.kaomoji.moe/web/search?search="$(echo "" | dmenu -p "type in the emoticon you want" -fn Monospace-18) | xclip -selection clipboard && notify-send "jap emoji clipboard writer" "$(xclip -selection clipboard -out) was written to clipboard"

@@ -1,0 +1,2 @@
+#!/bin/sh
+sleep 0$1 &&  maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png

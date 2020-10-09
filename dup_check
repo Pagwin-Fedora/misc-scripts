@@ -1,0 +1,12 @@
+#!/bin/python
+import sys
+import itertools
+file = sys.stdin
+if len(sys.argv)>0:
+    file=open(next(iter(sys.argv)))
+iterator = map(str.rstrip,sys.stdin)
+prev = next(iterator)
+for line in iterator:
+    if line == prev:
+        print(line)
+    prev = line

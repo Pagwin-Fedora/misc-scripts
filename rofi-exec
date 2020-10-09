@@ -1,0 +1,7 @@
+#!/bin/env sh
+action=`rofi -position 2 -dmenu -p "Command to run the text through"`
+text=`rofi -position 2 -dmenu -p "Text to run through the command" | eval $action`
+echo $text
+if [ -n "$text" ]; then
+    printf "$text" | xclip -selection clipboard
+fi

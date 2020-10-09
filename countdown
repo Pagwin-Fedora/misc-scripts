@@ -1,0 +1,21 @@
+#!/bin/python
+import time
+import sys
+reverse = False
+num = 0
+for arg in sys.argv:
+	if "countdown" in arg or "python" in arg:
+		continue
+	if arg == "-r":
+
+		reverse = True
+	else:
+		try:
+			num = int(arg)
+		except E:
+			print("you put a non-number that also isn't a valid cli option for this program?")
+range_ = range(1,num+1)
+range_ = reversed(range_) if reverse else range_
+for i in range_:
+	time.sleep(1)
+	print(i)

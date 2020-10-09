@@ -1,0 +1,2 @@
+#!/bin/sh
+countdown -r $1&&i3-msg workspace number $2&& xdotool mousemove $3 $4&& xdotool mousedown 1

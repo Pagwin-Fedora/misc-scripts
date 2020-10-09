@@ -1,0 +1,5 @@
+#!/bin/bash
+ssh-add -l > /dev/null || ssh-add `cat ~/.config/ssh/key_list`
+if [ $# -gt 0 ]; then
+	/usr/bin/ssh $@
+fi

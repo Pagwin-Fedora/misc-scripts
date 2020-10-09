@@ -1,0 +1,6 @@
+#/bin/sh
+# downloads the video in question
+youtube-dl --embed-sub --write-sub --sub-format ass --sub-lang enUS $@
+#for i in "`ls | rg '.*\.(mp4|ass)$' | sort | rg --multiline '.*\n.*' | sed -e 's/\....$//g' | sed -e 's/\.enUS$//g' | dup_check`"; do
+#    ffmpeg -i "$i.mp4" -i "$i.enUS.ass" -c copy -c:v copy -c:a copy -c:s mov_text "$i.ass.mp4"
+#done
