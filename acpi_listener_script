@@ -1,0 +1,21 @@
+#!/bin/python
+#stdin should be output from acpi
+import subprocess as sp
+#print('started')
+LOCK_PROCESS_NAME = 'slock'
+open_counter = 2
+while True:
+        buffer = input()
+        #print(buffer)
+        args = buffer.split(' ')
+        if args[1] == 'LID' and args[2] == 'close'or args[1] == 'SBTN':
+            sp.call(['/usr/bin/lock-script'])
+        elif args[1] == 'LID' and args[2] == 'open':
+            open_counter+=1
+            if open_counter %3 == 0:
+                sp.call(['notify-send','TODO',open('/home/fedora/TODO').read()])
+                open_counter = 0
+            #pid = sp.Popen(['pgrep',LOCK_PROCESS_NAME],stdout=sp.PIPE).communicate()
+            ## I honestly forget why I put this here but it seems to break everything so... 
+            ##okay now I remember it was supposed to make it so the notification didn't send until the lock screen was gotten rid of but I got rid of a program needed for it to work
+            #sp.Popen(['inotifywait','/proc/'+str(pid[0].strip().decode('utf8'))],stdout=sp.PIPE).wait()

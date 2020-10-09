@@ -1,0 +1,11 @@
+#!/bin/sh
+# grep is used
+# dmenu is used to show the menu at the top of the screen and outputs the choosen option
+# awk filters out the non-emoji
+# tr gets rid of the new line
+# xclip puts it into the clipboard
+grep -v "#" ~/.scripts/emoji | dmenu -i -p Emoji\ Selection -l 20 -fn Monospace-18 | awk '{print $1}' | tr -d "\n" | xclip -selection clipboard&&
+xclip -o -selection clipboard | xclip -selection primary
+echo $(xclip -o -selection clipboard)
+#&&
+#notify-send "$(xclip -o -selection clipboard) copied to clipboard"

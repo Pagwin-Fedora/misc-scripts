@@ -1,0 +1,6 @@
+#!/bin/sh
+while :
+do
+inotifywait /var/output_wav.wav&&
+mpv /var/output_wav.wav;
+done

@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo killall tty-clock &> /dev/null

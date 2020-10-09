@@ -1,0 +1,4 @@
+#!/bin/sh
+#cat ~/.scripts/tts-options | dmenu -l 5 -p "which way do you want to tts?" | dash
+cat ~/.scripts/tts-options | dash
+#pico2wave -w /var/output_wav.wav $(echo "" | dmenu -p "type stuff you want done in text to speech here")

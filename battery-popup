@@ -1,0 +1,2 @@
+#!/bin/sh
+zenity --title "battery" --text $(~/.scripts/battery-check)% --info

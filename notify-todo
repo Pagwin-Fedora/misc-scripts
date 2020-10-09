@@ -1,0 +1,3 @@
+#!/bin/sh
+cat ~/TODO && notify-send -u critical TODO "$(cat TODO)";
+echo asdf > /home/fedora/log
