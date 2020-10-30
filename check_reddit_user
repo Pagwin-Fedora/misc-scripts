@@ -1,0 +1,24 @@
+#!/bin/python
+import click
+import urllib.request
+import json
+#json[0]["created_utc"]
+#json[]
+#a cli python script that I was gonna use to stalk a reddit user to see if they went inactive long enough to snipe a subreddit from them... don't ask
+@click.command()
+@click.option('--user','-u',type=str,required=True)
+@click.option('--json','-j','jdata', is_flag=True)
+@click.option('--last-comment','-c','last_comment',is_flag=True)
+def check_user(user,jdata,last_comment):
+    req_obj = urllib.request.Request("https://api.reddit.com/user/%s"%user)
+    req_obj.add_header("User-agent","reddit_user_watch 0.9.99")
+    data = json.load(urllib.request.urlopen(req_obj),encoding="utf-8")
+    if last_comment:
+        print(int(data["data"]["children"][0]["data"]["created_utc"]))
+    if jdata:
+        print(json.dumps(data))
+    #data = json.load(request.urlopen(f"https://www.reddit.com/user/%s.json"%user))
+    #print(data)
+
+if __name__ == '__main__':
+    check_user()
