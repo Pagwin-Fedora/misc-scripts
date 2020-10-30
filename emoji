@@ -1,3 +1,4 @@
+#used in the emoji search script
 😀 - grinning face
 😃 - grinning face with big eyes
 😄 - grinning face with smiling eyes
@@ -1742,3 +1743,23 @@
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 - flag: England
 🏴󠁧󠁢󠁳󠁣󠁴󠁿 - flag: Scotland
 🏴󠁧󠁢󠁷󠁬󠁳󠁿 - flag: Wales
+¢ - currency: cent
+α - greek letter: alpha
+β - greek letter: beta
+γ - greek letter: gamma
+Δ - greek letter: delta(upper)
+δ - greek letter: delta(lower)
+ε - greek letter: epsilon
+ζ - greek letter: zeta
+η - greek letter: eta
+θ - greek letter: theta
+λ - greek letter: lambda
+μ - greek letter: mu
+ξ - greek letter: xi
+π - greek letter: pi
+ρ - greek letter: rho
+Σ - greek letter: sigma(upper)
+σ - greek letter: sigma(lower)
+φ - greek letter: phi
+ψ - greek letter: psi
+ω - greek letter: epsilon
