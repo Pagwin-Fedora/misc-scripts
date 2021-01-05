@@ -6,4 +6,6 @@ elif [ $1 == "search" ]; then
     firefox --search "$2"
 elif [ $1 == "yt" ]; then
     firefox --search "yt! ""$2"
+elif [ $1 == "url" ]; then
+    firefox --new-tab "$2"
 fi
