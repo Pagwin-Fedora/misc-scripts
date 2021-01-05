@@ -1,0 +1,10 @@
+#!/bin/sh
+#simple script that uses the countdown script and sox to make a little alarm timer
+countdown -r $1
+while [ true ] ;do
+    for i in {0..2}; do
+	play -v 0.1 ~/.audio/alarm.mp3 
+	sleep 0.1
+    done
+    sleep 1
+done
